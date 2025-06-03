@@ -5,6 +5,7 @@ import { styled } from '../../../styled-system/jsx';
 import { tabs } from '../../../styled-system/recipes';
 import Box from '../Box/Box';
 import Button from '../Button/Button';
+import BitkitButton from '../BitkitButton/BitkitButton';
 
 const TabsComponent = () => {
   const classes = tabs();
@@ -23,6 +24,9 @@ const TabsComponent = () => {
         </Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content className={classes.content} value="react">
+        <BitkitButton as="a" href="#e" size="lg" variant="primary">
+          <span>Bitkit Button</span>
+        </BitkitButton>
         <Box as="header" color="red.50" textStyle="body/sm/regular" marginBlockEnd="32">
           Box body/sm/regular
         </Box>
