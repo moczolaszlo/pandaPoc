@@ -1,11 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Tabs } from '@ark-ui/react';
-import Link from '../Link/Link';
 import { styled } from '../../../styled-system/jsx';
 import { tabs } from '../../../styled-system/recipes';
-import Box from '../Box/Box';
-import Button from '../Button/Button';
-import BitkitButton from '../BitkitButton/BitkitButton';
 
 const TabsComponent = () => {
   const classes = tabs();
@@ -24,18 +20,7 @@ const TabsComponent = () => {
         </Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content className={classes.content} value="react">
-        <BitkitButton as="a" href="#e" size="lg" variant="primary">
-          <span>Bitkit Button</span>
-        </BitkitButton>
-        <Box as="header" color="red.50" textStyle="body/sm/regular" marginBlockEnd="32">
-          Box body/sm/regular
-        </Box>
-        <Button variant="primary" size="lg">
-          <button type="button">Primary Button</button>
-        </Button>
-        <Link color="red.40">
-          <a href="#">This is a link</a>
-        </Link>
+        React Content
       </Tabs.Content>
       <Tabs.Content className={classes.content} value="vue">
         Vue Content

@@ -1,13 +1,14 @@
-import { createElement, ElementType } from 'react';
+import { ElementType } from 'react';
+
+import { BitkitComponentProps } from '../../types';
 import { styled } from '../../../styled-system/jsx';
 
-type BoxProps = {
-  as?: ElementType;
-} & React.HTMLAttributes<HTMLElement>;
+export type BoxProps<T extends ElementType> = BitkitComponentProps<T>;
 
-const Box = (props: BoxProps) => {
+const Box = <T extends ElementType = 'div'>(props: BoxProps<T>) => {
   const { as = 'div', ...rest } = props;
-  return createElement(as, rest);
+  const Component = styled(as);
+  return <Component {...rest} />;
 };
 
-export default styled(Box);
+export default Box;
