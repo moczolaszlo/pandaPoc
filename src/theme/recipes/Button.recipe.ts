@@ -57,6 +57,9 @@ const button = defineRecipe({
     fontWeight: 600,
     border: '1px solid transparent',
     display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '8',
     _disabled: {
       cursor: 'not-allowed',
     },

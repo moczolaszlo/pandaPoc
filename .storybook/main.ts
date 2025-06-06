@@ -34,6 +34,25 @@ const config: StorybookConfig = {
   "framework": {
     "name": "@storybook/react-webpack5",
     "options": {}
-  }
+  },
+  webpackFinal: async (config) => {
+    config.module = {
+      ...config.module,
+      rules: [
+        ...(config.module?.rules ?? []),
+        {
+          test: /.*\/bitkit\/.*tsx?$/,
+          use: [
+            {
+              loader: 'ts-loader',
+              options: { transpileOnly: true, configFile: require.resolve('@bitrise/bitkit/src/tsconfig.json') },
+            },
+          ],
+        },
+      ],
+    };
+
+    return config;
+  },
 };
 export default config;

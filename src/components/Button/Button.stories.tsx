@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react-webpack5';
-import * as Icons from 'react-icons/go';
 
 import Button, { ButtonComponent, ButtonProps } from './Button';
 
@@ -18,7 +17,6 @@ const meta: Meta<ButtonProps> = {
     },
   },
   args: {
-    children: <button type="button">Button label</button>,
     size: 'lg',
     variant: 'primary',
   },
@@ -26,17 +24,17 @@ const meta: Meta<ButtonProps> = {
 
 export default meta;
 
-export const Default: StoryObj<ButtonProps> = {};
+export const Default: StoryObj<ButtonProps> = {
+  args: {
+    children: 'Button label',
+  },
+};
 
 export const ComposedWithIcon: StoryObj<typeof Button> = {
   render: (props) => {
-    const Icon = Icons.GoCheckCircle;
     return (
       <Button {...props} alignItems="center" gap="8">
-        <button type="button">
-          <Icon size="1.5rem" />
-          Button label
-        </button>
+        Button label
       </Button>
     );
   },
