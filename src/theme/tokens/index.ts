@@ -4,6 +4,7 @@ import fonts from './fonts';
 import fontSizes from './fontSizes';
 import fontWeights from './fontWeights';
 import radii from './radii';
+import shadows from './shadows';
 import sizesAndSpacing from './sizesAndSpacing';
 
 const tokens: Tokens = {
@@ -12,6 +13,7 @@ const tokens: Tokens = {
   fontSizes,
   fontWeights,
   radii,
+  shadows,
   sizes: sizesAndSpacing,
   spacing: sizesAndSpacing,
 };
