@@ -1,6 +1,6 @@
 import { defineSlotRecipe } from '@pandacss/dev';
 
-const tabs = defineSlotRecipe({
+const field = defineSlotRecipe({
   className: 'field',
   slots: ['root', 'errorText', 'helperText', 'label'],
   base: {
@@ -40,4 +40,4 @@ const tabs = defineSlotRecipe({
   },
 });
 
-export default tabs;
+export default field;

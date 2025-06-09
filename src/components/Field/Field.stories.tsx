@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-webpack5';
-import Field from './Field';
+import * as Field from './Field';
 
 type StoryArgs = {
   disabled?: boolean;
