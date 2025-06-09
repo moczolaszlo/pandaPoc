@@ -3,9 +3,16 @@ import { combobox, input, ComboboxVariantProps } from '../../../styled-system/re
 import { styled } from '../../../styled-system/jsx';
 
 import { createStyleContext } from '../../utils/create-style-context';
-import { HTMLStyledProps } from '../../../styled-system/types';
+import { ComponentProps, HTMLStyledProps } from '../../../styled-system/types';
 
 const { withProvider, withContext } = createStyleContext(combobox);
+
+export type RootProviderProps = ComponentProps<typeof RootProvider>;
+
+export const RootProvider = withProvider<
+  HTMLDivElement,
+  Assign<Assign<HTMLStyledProps<'div'>, Combobox.RootProviderBaseProps<Combobox.CollectionItem>>, ComboboxVariantProps>
+>(Combobox.RootProvider, 'root');
 
 export const Root = withProvider<
   HTMLDivElement,
