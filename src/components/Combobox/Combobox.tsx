@@ -1,4 +1,4 @@
-import { Assign, Combobox } from '@ark-ui/react';
+import { Assign, Combobox, PolymorphicProps, ark } from '@ark-ui/react';
 import { combobox, input, ComboboxVariantProps } from '../../../styled-system/recipes';
 import { styled } from '../../../styled-system/jsx';
 
@@ -44,9 +44,24 @@ export const Content = withContext<HTMLSpanElement, Assign<HTMLStyledProps<'div'
   'content',
 );
 
+export const ItemGroup = withContext<HTMLSpanElement, Assign<HTMLStyledProps<'div'>, Combobox.ItemGroupBaseProps>>(
+  Combobox.ItemGroup,
+  'itemGroup',
+);
+
+export const ItemGroupLabel = withContext<
+  HTMLSpanElement,
+  Assign<HTMLStyledProps<'div'>, Combobox.ItemGroupLabelBaseProps>
+>(Combobox.ItemGroupLabel, 'itemGroupLabel');
+
 export const Item = withContext<HTMLSpanElement, Assign<HTMLStyledProps<'div'>, Combobox.ItemBaseProps>>(
   Combobox.Item,
   'item',
+);
+
+export const ItemIcon = withContext<HTMLSpanElement, Assign<HTMLStyledProps<'span'>, PolymorphicProps>>(
+  ark.span,
+  'itemIcon',
 );
 
 export const ItemText = withContext<HTMLSpanElement, Assign<HTMLStyledProps<'span'>, Combobox.ItemTextBaseProps>>(

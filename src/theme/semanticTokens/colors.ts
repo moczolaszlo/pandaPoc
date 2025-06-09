@@ -534,6 +534,19 @@ const colors: SemanticTokens['colors'] = {
     'on-disabled': { value: { base: '{colors.sys.fg.on-disabled}' } },
     disabled: { value: { base: '{colors.sys.fg.disabled}' } },
   },
+  icon: {
+    primary: { value: { base: '{colors.sys.fg.primary}' } },
+    secondary: { value: { base: '{colors.sys.fg.secondary}' } },
+    tertiary: { value: { base: '{colors.sys.fg.tertiary}' } },
+    interactive: { value: { base: '{colors.sys.interactive.base}' } },
+    'interactive-hover': { value: { base: '{colors.sys.interactive.strong}' } },
+    positive: { value: { base: '{colors.sys.fg.positive}' } },
+    negative: { value: { base: '{colors.sys.fg.negative}' } },
+    'on-color': { value: { base: '{colors.sys.fg.on-color}' } },
+    'on-contrast': { value: { base: '{colors.sys.fg.on-contrast}' } },
+    'on-disabled': { value: { base: '{colors.sys.fg.on-disabled}' } },
+    disabled: { value: { base: '{colors.sys.fg.disabled}' } },
+  },
   button: {
     primary: {
       bg: {
