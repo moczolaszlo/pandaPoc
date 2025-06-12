@@ -9,7 +9,7 @@ const globalCss: Config['globalCss'] = {
     color: 'text.body',
     textStyle: 'body/lg/regular',
   },
-  "a, summary, button, input, [tabindex]:not([tabindex='-1'])": {
+  "a, summary, button, input, textarea, select, [tabindex]:not([tabindex='-1'])": {
     outline: 'none',
     _focusVisible: {
       outline: '3px',

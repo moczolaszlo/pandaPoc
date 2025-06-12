@@ -1,23 +1,17 @@
-import { defineRecipe, RecipeConfig } from '@pandacss/dev';
+import { defineRecipe } from '@pandacss/dev';
 import { rem } from '../../utils/utils';
 
-export const inputConfig: RecipeConfig = {
-  className: 'input',
-  jsx: ['Input', 'Field.Input'],
+const select = defineRecipe({
+  className: 'select',
+  jsx: ['Select', 'Field.Select'],
   base: {
-    appearance: 'none',
-    background: 'background.primary',
-    borderColor: 'border.regular',
+    display: 'block',
+    width: '100%',
     borderRadius: '4',
     borderWidth: '1',
-    color: 'input.text.inputValue',
-    textStyle: 'body/lg/regular',
-    width: '100%',
-    boxShadow: 'inner',
+    borderColor: 'border.strong',
+    background: 'background.primary',
     transition: '200ms',
-    _placeholder: {
-      color: 'input.text.placeholder',
-    },
     _hover: {
       borderColor: 'border.hover',
     },
@@ -35,15 +29,9 @@ export const inputConfig: RecipeConfig = {
       background: 'background.disabled',
       cursor: 'not-allowed',
     },
-    _readOnly: {
-      _hover: {
-        borderColor: 'border.regular',
-      },
-      background: 'background.disabled',
-    },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'lg',
   },
   variants: {
     size: {
@@ -51,8 +39,6 @@ export const inputConfig: RecipeConfig = {
       lg: { paddingInline: rem(15), paddingBlock: rem(11) },
     },
   },
-};
+});
 
-const input = defineRecipe(inputConfig);
-
-export default input;
+export default select;

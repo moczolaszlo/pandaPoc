@@ -171,7 +171,7 @@ const StoryComponent = ({ multiple, size }: StoryArgs) => {
       </Field.Root>
       <Box marginBlockStart="16" textStyle="body/md/regular">
         Selected items:{' '}
-        {combobox.selectedItems.length > 0 ? combobox.selectedItems.map((item) => item.text).join(', ') : '-'}
+        {combobox.selectedItems.length > 0 ? combobox.selectedItems.map((item) => item.value).join(', ') : '-'}
       </Box>
     </>
   );

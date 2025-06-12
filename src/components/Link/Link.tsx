@@ -1,11 +1,11 @@
 import { ElementType } from 'react';
-
-import { BitkitComponentProps } from '../../types';
 import { styled } from '../../../styled-system/jsx';
 
-export type LinkProps<T extends ElementType> = BitkitComponentProps<T>;
+export type LinkProps = {
+  as?: ElementType;
+};
 
-const Link = <T extends ElementType = 'a'>(props: LinkProps<T>) => {
+const Link = (props: LinkProps) => {
   const { as = 'a', ...rest } = props;
   const Component = styled(as);
   return <Component {...rest} />;

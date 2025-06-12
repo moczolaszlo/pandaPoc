@@ -1,6 +1,6 @@
 import { Assign, Combobox, PolymorphicProps, ark } from '@ark-ui/react';
-import { combobox, input, ComboboxVariantProps } from '../../../styled-system/recipes';
 import { styled } from '../../../styled-system/jsx';
+import { combobox, input, ComboboxVariantProps } from '../../../styled-system/recipes';
 
 import { createStyleContext } from '../../utils/create-style-context';
 import { ComponentProps, HTMLStyledProps } from '../../../styled-system/types';
@@ -17,7 +17,7 @@ export const RootProvider = withProvider<
 export const Root = withProvider<
   HTMLDivElement,
   Assign<Assign<HTMLStyledProps<'div'>, Combobox.RootBaseProps<Combobox.CollectionItem>>, ComboboxVariantProps>
->(styled(Combobox.Root), 'root');
+>(Combobox.Root, 'root');
 
 export const Control = withContext<HTMLSpanElement, Assign<HTMLStyledProps<'div'>, Combobox.ControlBaseProps>>(
   Combobox.Control,

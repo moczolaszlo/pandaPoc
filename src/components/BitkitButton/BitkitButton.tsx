@@ -1,18 +1,14 @@
-import { ComponentPropsWithoutRef, ElementType, PropsWithChildren } from 'react';
+import { ElementType } from 'react';
 import { Icon, TypeIconName } from '@bitrise/bitkit';
 
 import { button } from '../../../styled-system/recipes';
 import { cx } from '../../../styled-system/css';
 import { styled } from '../../../styled-system/jsx';
-import { SystemProperties } from '../../../styled-system/types';
 
-type BitkitComponentProps<E extends ElementType> = PropsWithChildren<
-  ComponentPropsWithoutRef<E> & {
-    as?: E;
-  } & SystemProperties
->;
-
-export type BitkitButtonProps<T extends ElementType> = BitkitComponentProps<T> & {
+export type BitkitButtonProps = {
+  as?: ElementType;
+  children?: React.ReactNode;
+  className?: string;
   disabled?: boolean;
   leftIconName?: TypeIconName;
   rightIconName?: TypeIconName;
@@ -20,7 +16,7 @@ export type BitkitButtonProps<T extends ElementType> = BitkitComponentProps<T> &
   variant?: 'primary' | 'secondary' | 'tertiary' | 'danger-primary' | 'danger-secondary' | 'danger-tertiary';
 };
 
-const BitkitButton = <T extends ElementType = 'button'>(props: BitkitButtonProps<T>) => {
+const BitkitButton = (props: BitkitButtonProps) => {
   const { as = 'button', children, className, leftIconName, rightIconName, size, variant, ...rest } = props;
 
   const Component = styled(as);

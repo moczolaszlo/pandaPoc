@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
-import { Assign, Field as ArkField, useFieldContext } from '@ark-ui/react';
-import { field, type FieldVariantProps, input } from '../../../styled-system/recipes';
+import { Assign, Field, useFieldContext } from '@ark-ui/react';
+import { field, type FieldVariantProps, input, select, textarea } from '../../../styled-system/recipes';
 import { styled } from '../../../styled-system/jsx';
 
 import { createStyleContext } from '../../utils/create-style-context';
@@ -10,20 +10,20 @@ const { withProvider, withContext } = createStyleContext(field);
 
 export const Root = withProvider<
   HTMLDivElement,
-  Assign<Assign<HTMLStyledProps<'div'>, ArkField.RootBaseProps>, FieldVariantProps>
->(styled(ArkField.Root), 'root');
+  Assign<Assign<HTMLStyledProps<'div'>, Field.RootBaseProps>, FieldVariantProps>
+>(Field.Root, 'root');
 
 export type RootProps = ComponentProps<typeof Root>;
 
-export const StyledLabel = withContext<HTMLLabelElement, Assign<HTMLStyledProps<'label'>, ArkField.LabelBaseProps>>(
-  styled(ArkField.Label),
+const StyledLabel = withContext<HTMLLabelElement, Assign<HTMLStyledProps<'label'>, Field.LabelBaseProps>>(
+  Field.Label,
   'label',
 );
 
 export const Label = ({
   children,
   ...rest
-}: PropsWithChildren<Assign<HTMLStyledProps<'label'>, ArkField.LabelBaseProps>>) => {
+}: PropsWithChildren<Assign<HTMLStyledProps<'label'>, Field.LabelBaseProps>>) => {
   const { required } = useFieldContext();
   return (
     <StyledLabel {...rest}>
@@ -32,14 +32,16 @@ export const Label = ({
   );
 };
 
-export const Input = styled(ArkField.Input, input);
+export const Input = styled(Field.Input, input);
+export const Textarea = styled(Field.Textarea, textarea);
+export const Select = styled(Field.Select, select);
 
-export const HelperText = withContext<HTMLSpanElement, Assign<HTMLStyledProps<'span'>, ArkField.HelperTextBaseProps>>(
-  styled(ArkField.HelperText),
+export const HelperText = withContext<HTMLSpanElement, Assign<HTMLStyledProps<'span'>, Field.HelperTextBaseProps>>(
+  Field.HelperText,
   'helperText',
 );
 
-export const ErrorText = withContext<HTMLSpanElement, Assign<HTMLStyledProps<'span'>, ArkField.ErrorTextBaseProps>>(
-  styled(ArkField.ErrorText),
+export const ErrorText = withContext<HTMLSpanElement, Assign<HTMLStyledProps<'span'>, Field.ErrorTextBaseProps>>(
+  Field.ErrorText,
   'errorText',
 );
