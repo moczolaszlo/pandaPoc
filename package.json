@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@bitrise/eslint-plugin": "^2.12.0",
-    "@pandacss/studio": "^0.53.7",
+    "@pandacss/studio": "^0.54.0",
     "@storybook/addon-docs": "^9.0.9",
     "@storybook/addon-styling-webpack": "^2.0.0",
     "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
@@ -38,7 +38,7 @@
     "@bitrise/bitkit": "^13.256.0",
     "@fontsource-variable/figtree": "^5.2.8",
     "@fontsource-variable/source-code-pro": "^5.2.6",
-    "@pandacss/dev": "^0.53.7",
+    "@pandacss/dev": "^0.54.0",
     "@types/react": "^19.1.8",
     "react": "^19.1.0"
   }

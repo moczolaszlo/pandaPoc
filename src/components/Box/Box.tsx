@@ -1,11 +1,17 @@
 import { ElementType } from 'react';
 
 import { styled } from '../../../styled-system/jsx';
+import { StyledComponent } from '../../../styled-system/types';
 
-const Box = <T extends ElementType = 'div'>(props) => {
+export type BoxProps = {
+  as?: ElementType;
+  children?: React.ReactNode;
+} & StyledComponent<'div'>;
+
+const Box = (props: BoxProps) => {
   const { as = 'div', ...rest } = props;
-  const Component = styled(as);
+  const Component = as;
   return <Component {...rest} />;
 };
 
-export default Box;
+export default styled(Box);
