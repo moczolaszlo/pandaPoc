@@ -5,6 +5,7 @@ import field from './Field.recipe';
 import input from './Input.recipe';
 import select from './Select.recipe';
 import tabs from './Tabs.recipe';
+import text from './Text.recipe';
 import textarea from './Textarea.recipe';
 
 const recipes: Record<string, RecipeConfig> = {
@@ -14,6 +15,7 @@ const recipes: Record<string, RecipeConfig> = {
   input,
   select,
   tabs,
+  text,
   textarea,
 };
 

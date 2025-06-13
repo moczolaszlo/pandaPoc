@@ -1,5 +1,6 @@
 import Box from '../Box/Box';
 import Button from '../Button/Button';
+import Text from '../Text/Text';
 
 const TestPage = () => {
   return (
@@ -9,6 +10,9 @@ const TestPage = () => {
           Button label
         </a>
       </Button>
+      <Box width="96">
+        <Text textStyle="heading/h6">The quick brown fox jumps over the lazy dog.</Text>
+      </Box>
     </Box>
   );
 };
