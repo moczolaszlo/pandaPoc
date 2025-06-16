@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-webpack5';
 
-import Button, { ButtonComponent, ButtonProps } from './Button';
+import Button, { ButtonProps } from './Button';
 
 const meta: Meta<ButtonProps> = {
-  component: ButtonComponent,
+  component: Button,
   argTypes: {
     children: {
       table: {

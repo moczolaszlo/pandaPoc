@@ -1,17 +1,12 @@
-import { ElementType } from 'react';
-
+import { ark, PolymorphicProps } from '@ark-ui/react';
 import { styled } from '../../../styled-system/jsx';
-import { StyledComponent } from '../../../styled-system/types';
+import { HTMLStyledProps } from '../../../styled-system/types';
 
-export type BoxProps = {
-  as?: ElementType;
-  children?: React.ReactNode;
-} & StyledComponent<'div'>;
+export type BoxProps = HTMLStyledProps<'div'> & PolymorphicProps;
 
 const Box = (props: BoxProps) => {
-  const { as = 'div', ...rest } = props;
-  const Component = as;
-  return <Component {...rest} />;
+  const Component = styled(ark.div);
+  return <Component {...props} />;
 };
 
-export default styled(Box);
+export default Box;

@@ -20,5 +20,5 @@
     "strict": true,
     "target": "esnext",
   },
-  "include": ["./src/**/*", "*.mjs", "./panda.config.ts"],
+  "include": ["./src/**/*", "./panda.config.ts"],
 }
