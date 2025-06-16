@@ -1,10 +1,10 @@
 import { text } from '../../../styled-system/recipes';
-import { HTMLStyledProps, styled } from '../../../styled-system/jsx';
+import { styled } from '../../../styled-system/jsx';
+import { type HTMLStyledProps } from '../../../styled-system/types';
 
-export type TextProps = HTMLStyledProps<'div'>;
+export type TextProps = HTMLStyledProps<'div'> & { as?: any };
 
-const Text = (props: TextProps) => {
-  const { as = 'p', ...rest } = props;
+const Text = ({as = 'p', ...rest}: TextProps) => {
   const Component = as;
   return <Component {...rest} />;
 };

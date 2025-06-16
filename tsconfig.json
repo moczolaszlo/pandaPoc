@@ -14,11 +14,10 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    // https://github.com/chakra-ui/chakra-ui/issues/2955
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "target": "esnext",
   },
-  "include": ["./src/**/*", "./panda.config.ts"],
+  "include": ["./src/**/*", "./panda.config.ts", "./styled-system/**/*"],
 }
