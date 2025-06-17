@@ -127,6 +127,10 @@ const tag = defineSlotRecipe({
         label: {
           textStyle: 'comp/tag/md',
         },
+        closeTrigger: {
+          marginInlineEnd: '-2px',
+          padding: '4'
+        }
       },
     },
   },

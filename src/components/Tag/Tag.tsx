@@ -22,7 +22,7 @@ const Tag = (props: TagProps) => {
       {!!iconName && <Icon name={iconName} size={size === 'sm' ? '16' : '24'} />}
       <span className={classes.label}>{children}</span>
       {!!onClose  && <button className={classes.closeTrigger} type='button'>
-        <Icon name="Cross" size={size === 'sm' ? '16' : '24'} />
+        <Icon name="Cross" size="16" />
       </button>}
     </Root>
   );

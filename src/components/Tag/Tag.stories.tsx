@@ -17,6 +17,7 @@ const meta: Meta<typeof Tag> = {
     colorScheme: 'neutral',
     iconName: 'Check',
     size: 'md',
+    onClose: () => {}
   },
 };
 
