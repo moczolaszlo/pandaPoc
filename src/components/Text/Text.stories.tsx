@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react-webpack5';
-import textStyles from '../../theme/textStyles';
 import Box from '../Box/Box';
 import Text from './Text';
 
@@ -9,13 +8,6 @@ const meta: Meta<typeof Text> = {
   args: {
     children: 'The quick brown fox jumps over the lazy dog.',
     hasEllipsis: false,
-    textStyle: 'body/lg/regular',
-  },
-  argTypes: {
-    textStyle: {
-      control: 'select',
-      options: Object.keys(textStyles),
-    },
   },
   render: (args) => (
     <Box width={args.hasEllipsis ? '96' : 'auto'}>
