@@ -1,4 +1,7 @@
 import { defineRecipe } from '@pandacss/dev';
+import textStyles from '../textStyles';
+
+const textStyle = textStyles;
 
 const select = defineRecipe({
   className: 'text',
@@ -10,6 +13,7 @@ const select = defineRecipe({
         whiteSpace: 'nowrap',
       },
     },
+    textStyle,
   },
 });
 

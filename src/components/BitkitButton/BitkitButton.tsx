@@ -1,6 +1,6 @@
 import { Icon, TypeIconName } from '@bitrise/bitkit';
 
-import { button } from '../../../styled-system/recipes';
+import { button, ButtonVariantProps } from '../../../styled-system/recipes';
 import { cx } from '../../../styled-system/css';
 import { HTMLStyledProps, styled } from '../../../styled-system/jsx';
 
@@ -11,9 +11,8 @@ export type BitkitButtonProps = {
   disabled?: boolean;
   leftIconName?: TypeIconName;
   rightIconName?: TypeIconName;
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'danger-primary' | 'danger-secondary' | 'danger-tertiary';
-} & HTMLStyledProps<'button' | 'a'>;
+} & HTMLStyledProps<'button' | 'a'> &
+  ButtonVariantProps;
 
 const BitkitButton = (props: BitkitButtonProps) => {
   const { as = 'button', children, className, leftIconName, rightIconName, size, variant, ...rest } = props;

@@ -5,14 +5,14 @@ import Text from '../Text/Text';
 
 const TestPage = () => {
   return (
-    <Box padding="16" rel="ative" data-testid="test-page" background="pal.red.50">
+    <Box padding="16" rel="ative" data-testid="test-page">
       <Button variant="secondary" asChild>
         <a href="https://www.bitrise.io" target="_blank" rel="noopener noreferrer">
           Button label
         </a>
       </Button>
       <BitkitButton as="button">eee</BitkitButton>
-      <Box data-testid="test-box" asChild width="96">
+      <Box data-testid="test-box" width="96" padding="16">
         <Text as="h6" textStyle="heading/h6" hasEllipsis>
           The quick brown fox jumps over the lazy dog.
         </Text>
